@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyTravel - จองตั๋วเครื่องบินออนไลน์</title>
+    <link rel="icon" type="image/x-icon" href="./pic/logo.jpg">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="./pic/logo2.jpg" alt="EasyTravel Logo" class="logo">
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link active">
+                            <i class="fas fa-home"></i>
+                            <span>หน้าแรก</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="flights.html" class="nav-link">
+                            <i class="fas fa-plane"></i>
+                            <span>เที่ยวบิน</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav-actions">
+                <button class="cart-btn" id="cart-btn">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cart-count">0</span>
+                </button>
+                <a href="login.html" class="btn btn-outline">เข้าสู่ระบบ</a>
+                <a href="reg.html" class="btn btn-primary">สมัครสมาชิก</a>
+            </div>
+
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="container">
+                <h1 class="hero-title">ค้นหาเที่ยวบินที่สมบูรณ์แบบ</h1>
+                <p class="hero-subtitle">จองตั๋วเครื่องบินง่ายๆ ในราคาที่ดีที่สุด</p>
+                
+                <form class="search-form" id="search-form">
+                    <div class="form-group">
+                        <label for="destination">
+                            <i class="fas fa-map-marker-alt"></i>
+                            ปลายทาง
+                        </label>
+                        <input type="text" id="destination" name="destination" placeholder="เลือกเมืองหรือสถานที่">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="departure">
+                            <i class="fas fa-calendar-alt"></i>
+                            วันออกเดินทาง
+                        </label>
+                        <input type="date" id="departure" name="departure">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="return">
+                            <i class="fas fa-calendar-alt"></i>
+                            วันกลับ
+                        </label>
+                        <input type="date" id="return" name="return">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="passengers">
+                            <i class="fas fa-users"></i>
+                            ผู้โดยสาร
+                        </label>
+                        <select id="passengers" name="passengers">
+                            <option value="1">1 คน</option>
+                            <option value="2">2 คน</option>
+                            <option value="3">3 คน</option>
+                            <option value="4">4 คน</option>
+                            <option value="5">5 คน</option>
+                            <option value="6">6 คน</option>
+                            <option value="7">7 คน</option>
+                            <option value="8">8 คน</option>
+                            <option value="9">9 คน</option>
+                            <option value="10">10 คน</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-search">
+                        <i class="fas fa-search"></i>
+                        ค้นหา
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Destinations -->
+    <section class="destinations">
+        <div class="container">
+            <div class="section-header">
+                <h2>จุดหมายยอดนิยม</h2>
+                <p>สำรวจสถานที่ท่องเที่ยวที่น่าสนใจทั่วโลก</p>
+            </div>
+            
+            <div class="destinations-grid">
+                <div class="destination-card" data-destination="paris">
+                    <div class="card-image">
+                        <img src="https://images.pexels.com/photos/338515/pexels-photo-338515.jpeg" alt="Paris">
+                        <div class="card-overlay">
+                            <button class="btn btn-card">เพิ่มในตะกร้า</button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>ปารีส</h3>
+                        <h4>หอไอเฟล</h4>
+                        <p>หอคอยชื่อดังแห่งศตวรรษที่ 19 สูง 330 เมตร</p>
+                        <div class="card-price">฿35,000</div>
+                    </div>
+                </div>
+
+                <div class="destination-card" data-destination="newyork">
+                    <div class="card-image">
+                        <img src="https://images.pexels.com/photos/290386/pexels-photo-290386.jpeg" alt="New York">
+                        <div class="card-overlay">
+                            <button class="btn btn-card">เพิ่มในตะกร้า</button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>นิวยอร์ก</h3>
+                        <h4>เทพีเสรีภาพ</h4>
+                        <p>สัญลักษณ์แห่งอเมริกาในอ่าวนิวยอร์ก</p>
+                        <div class="card-price">฿42,000</div>
+                    </div>
+                </div>
+
+                <div class="destination-card" data-destination="london">
+                    <div class="card-image">
+                        <img src="https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg" alt="London">
+                        <div class="card-overlay">
+                            <button class="btn btn-card">เพิ่มในตะกร้า</button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>ลอนดอน</h3>
+                        <h4>ลอนดอนอาย</h4>
+                        <p>ชิงช้าสวรรค์ริมแม่น้ำเทมส์ที่มีชื่อเสียง</p>
+                        <div class="card-price">฿38,000</div>
+                    </div>
+                </div>
+
+                <div class="destination-card" data-destination="bangkok">
+                    <div class="card-image">
+                        <img src="https://images.pexels.com/photos/1007426/pexels-photo-1007426.jpeg" alt="Bangkok">
+                        <div class="card-overlay">
+                            <button class="btn btn-card">เพิ่มในตะกร้า</button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>กรุงเทพฯ</h3>
+                        <h4>วัดพระแก้ว</h4>
+                        <p>สถานที่ศักดิ์สิทธิ์ที่มีพระแก้วมรกต</p>
+                        <div class="card-price">฿15,000</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Member Discount -->
+    <section class="discount-section">
+        <div class="container">
+            <div class="discount-card">
+                <div class="discount-content">
+                    <div class="discount-icon">
+                        <img src="pic/adsLogo.png" alt="Discount">
+                    </div>
+                    <div class="discount-text">
+                        <h2>ส่วนลดพิเศษสำหรับสมาชิก</h2>
+                        <p>รับส่วนลดเพิ่ม 15%<br>เมื่อเข้าสู่ระบบ!</p>
+                        <a href="login.html" class="btn btn-discount">เข้าสู่ระบบเลย</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>ตะกร้าสินค้า</h3>
+            <button class="cart-close" id="cart-close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-content">
+            <ul class="cart-items" id="cart-items">
+                <!-- Cart items will be populated by JavaScript -->
+            </ul>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>รวม: ฿<span id="cart-total">0</span></span>
+            </div>
+            <button class="btn btn-checkout" id="checkout-btn">ชำระเงิน</button>
+        </div>
+    </div>
+
+    <!-- Cart Overlay -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="./pic/logo2.jpg" alt="EasyTravel" class="footer-logo">
+                    <p>จองตั๋วเครื่องบินออนไลน์ง่ายๆ ในราคาที่ดีที่สุด</p>
+                </div>
+                <div class="footer-section">
+                    <h4>บริการ</h4>
+                    <ul>
+                        <li><a href="flights.html">จองเที่ยวบิน</a></li>
+                        <li><a href="#">ติดตามเที่ยวบิน</a></li>
+                        <li><a href="#">ยกเลิกการจอง</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>ช่วยเหลือ</h4>
+                    <ul>
+                        <li><a href="#">ติดต่อเรา</a></li>
+                        <li><a href="#">คำถามที่พบบ่อย</a></li>
+                        <li><a href="#">นโยบายความเป็นส่วนตัว</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>ติดตามเรา</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 EasyTravel. สงวนลิขสิทธิ์.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./index.js"></script>
+</body>
+</html>
